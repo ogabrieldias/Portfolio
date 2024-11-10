@@ -33,10 +33,7 @@ body {
     color: var(--text-color);
 }
 
-section{
-    min-height: 100vh;
-    background-color: aqua;
-}
+
 
 .header {
     position: fixed;
@@ -82,8 +79,45 @@ section{
     cursor: pointer;
 }
 
-section#home{    
+section{
+    min-height: 100vh;
+    padding: 10rem 7%;
+    background-color: aqua;
+}
+
+section#home {    
     min-width: 100vh;
+}
+
+section.home {
+    display: flex;
+    align-items: center;
+}
+
+section.home div.home-content {
+    max-width: 44rem;
+}
+
+div.home-content {
+    z-index: 1;
+}
+
+div.home-content p {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+div.home-content div.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--bg-color);
+    border-radius: 50%;
+    
+
 }
 
 div.triangulo {
