@@ -14,13 +14,9 @@
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
-    --color-01: #95F238;
-    --color-02: #AAF23D;
-    --color-03: #87BF34;
-    --color-04: #BFBFBF;
-    --color-05: #0D0D0D;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
-
 }
 
 html{
@@ -41,7 +37,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background-color: yellowgreen;
+    background-color: transparent;
     display: flex;
     align-items: center;
     z-index: 1;
@@ -49,7 +45,7 @@ body {
 
 .logo {
     font-size: 2.5rem;
-    color: var(--color-01);
+    color: var(--main-color);
     font-weight: 600;
     cursor: default;
     margin-right: auto;
@@ -81,8 +77,8 @@ body {
 
 section{
     min-height: 100vh;
-    padding: 10rem 7%;
-    background-color: aqua;
+    padding: 10rem 7% 2rem;
+    background-color: var(--bg-color);
 }
 
 section#home {    
@@ -102,6 +98,19 @@ div.home-content {
     z-index: 1;
 }
 
+
+div.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: .3;
+}
+
+div.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
 div.home-content p {
     font-size: 1.6rem;
     font-weight: 700;
@@ -116,18 +125,120 @@ div.home-content div.social-media a {
     background: transparent;
     border: .2rem solid var(--bg-color);
     border-radius: 50%;
-    
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--bg-color);
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+div.home-content div.social-media a:hover {
+    background-color: var(--bg-color);
+    color: var(--color-04);
+}
+
+a.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--bg-color);
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    border: .2rem solid transparent;
+    transition: .5s ease;
 
 }
 
-div.triangulo {
+a.btn:hover{
+    background: transparent;
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
+section.home div.profession-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width:  768px;
+    height: 768px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+section.home div.profession-container div.profession-box {
     position: absolute;
     top: 0;
     right: 0;
-    margin-left: 50rem;
-    border: 370px solid;
-    border-color: transparent transparent transparent #fc0;
+    width: 768px;
+    height: 768px;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+section.home div.profession-box div.profession {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-color);
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 384px;
+    background: var(--bg-color);
+    padding: 13px 0;
+}
+
+section.home div.profession-box div.profession:nth-child(1) i {
+    margin-right: 15px;
+}
+
+section.home div.profession-box div.profession:nth-child(2),
+section.home div.profession-box div.profession:nth-child(4) {
+    padding-bottom: 20px;
+}
+
+section.home div.profession i {
+    font-size: 3.8rem;
+}
+
+section.home div.profession h3 {
+    font-size: 3.2rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+section.home div.profession-box div.circle {
+     width: 560px;
+     height: 560px;
+     border: 3px solid var(--main-color);
+     border-radius: 50%;
+}
+
+section.home div.profession-container div.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid blue;
+    border-right: 384px solid yellowgreen;
+    border-bottom: 384px solid purple;
+    border-left: 384px solid red;
+}
+
+
+
+
+
+
+
+
 section#pagina-02{
     background-color: red;
 }
