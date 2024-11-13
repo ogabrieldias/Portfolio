@@ -41,6 +41,12 @@ body {
     display: flex;
     align-items: center;
     z-index: 1;
+    transition: .5s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+    box-shadow:  0 .1rem 1rem var(--shadow-color);
 }
 
 .logo {
@@ -57,6 +63,10 @@ body {
     color: var(--bg-color);
     font-weight: 500;
     margin-right: 3.5rem;
+}
+
+.header.sticky .navbar a {
+    color: var(--text-color);
 }
 
 .navbar a.active::before {
@@ -249,7 +259,7 @@ section.about {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    background: red;
+    background: rgb(0, 62, 112);
 }
 
 div.about-img img {
@@ -271,11 +281,12 @@ div.about-content h3 {
 }
 
 div.about-content p {
-     
+     font-size: 1.6rem;
+     margin: 2rem 0 3rem;
 }
 
 section#pagina-02{
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 }
 
 section#pagina-03{
