@@ -79,10 +79,20 @@ body {
     background: var(--bg-color);
 }
 
+.header.sticky .navbar a::before {
+    background: var(--main-color);
+    opacity: .7; 
+}
+
 #darkMode-icon {
     font-size: 2.4rem;
     color: var(--bg-color);
     cursor: pointer;
+}
+
+.header.sticky #darkMode-icon {
+    color: var(--text-color);
+    opacity: .9;
 }
 
 section{
@@ -150,10 +160,11 @@ div.home-content div.social-media a:hover {
 a.btn {
     display: inline-block;
     padding: 1.2rem 2.8rem;
-    background: var(--bg-color);
+    background: var(--main-color);
     border-radius: .6rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 1.6rem;
+    color: var(--bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
     border: .2rem solid transparent;
@@ -163,8 +174,8 @@ a.btn {
 
 a.btn:hover{
     background: transparent;
-    color: var(--bg-color);
-    border-color: var(--bg-color);
+    color: var(--main-color);
+    border-color: var(main);
 }
 
 section.home div.profession-container {
@@ -237,7 +248,7 @@ section.home div.profession-container div.overlay {
     width: 0;
     height: 0;
     border-top: 384px solid var(--main-color);
-    border-right: 384px solid var(--main-color);
+    border-right: 395px solid var(--main-color);
     border-bottom: 384px solid var(--main-color);
     border-left: 384px solid transparent;
 }
@@ -283,6 +294,49 @@ div.about-content h3 {
 div.about-content p {
      font-size: 1.6rem;
      margin: 2rem 0 3rem;
+}
+
+.services {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services .services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+ 
+.services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    text-align: center;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+    transition: .5s ease;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
 section#pagina-02{
